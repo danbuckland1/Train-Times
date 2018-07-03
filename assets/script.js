@@ -55,7 +55,18 @@ var config = {
     console.log(newDestination);
     console.log(newFirstTrain);
     console.log(newFrequency);
-  })
+
+    var newRow = $("<tr>").append(
+      $("<td>").text(newTrain),
+      $("<td>").text(newDestination),
+      $("<td>").text(newFrequency),
+      $("<td>").text(newFirstTrain),
+  
+    );
+
+    $("#train-table > tbody").append(newRow);
+
+  });
 
   
 
