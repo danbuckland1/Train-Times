@@ -17,7 +17,7 @@ var config = {
 
      var trainName = $("#train-name").val().trim();
      var trainDestination = $("#train-destination").val().trim();
-     var firstTrainTime = moment($("#first-train").val().trim(), "HH:mm").format("X");
+     var firstTrainTime = $("#first-train").val().trim();
      var trainFrequency = $("#train-frequency").val().trim();
 
       var newTrain = {
@@ -35,6 +35,7 @@ var config = {
       console.log(newTrain.firstTime);
       console.log(newTrain.frequency);
 
+
     $("#train-name").val("");
     $("#train-destination").val("");
     $("#first-train").val("");
@@ -42,24 +43,28 @@ var config = {
 
   });
 
-  // database.ref().on("child_added", function(childSnapShot){
-  //   console.log(childSnapShot.val());
+  database.ref().on("child_added", function(childSnapShot){
+    console.log(childSnapShot.val());
 
-  //   var trainName = childSnapShot.val().train;
-  //   var destination = childSnapShot.val().trainDestination;
-  //   var firstTime = childSnapShot.val().firstTrainTime;
-  //   var frequency = childSnapShot.val().trainFrequency;
+    var newTrain = childSnapShot.val().train;
+    var newDestination = childSnapShot.val().destination;
+    var newFirstTrain = childSnapShot.val().firstTime;
+    var newFrequency = childSnapShot.val().frequency;
 
-  //   conosole.log(trainName);
-  //   conosole.log(destination);
-  //   conosole.log(firstTime);
-  //   conosole.log(frequency);
+    console.log(newTrain);
+    console.log(newDestination);
+    console.log(newFirstTrain);
+    console.log(newFrequency);
+  })
 
-
-
-  // });
-
-  // var currentDate = moment();
-  // console.log(currentDate.format("MM/DD/YYYY hh:mm a"));
   
 
+  
+
+
+
+
+   // var currentDate = moment();
+  // console.log(currentDate.format("MM/DD/YYYY hh:mm a"));
+
+    
