@@ -47,11 +47,11 @@ var nextTrain = "";
 
     database.ref().push(newTrain);
 
-    console.log(newTrain.train);
-    console.log(newTrain.destination);
-    console.log(newTrain.firstTime);
-    console.log(newTrain.frequency);
-    console.log(newTrain.tMinutesTillTrain);
+    // console.log(newTrain.train);
+    // console.log(newTrain.destination);
+    // console.log(newTrain.firstTime);
+    // console.log(newTrain.frequency);
+    // console.log(newTrain.tMinutesTillTrain);
     
 
 
