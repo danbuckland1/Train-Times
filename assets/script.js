@@ -33,8 +33,7 @@ var nextTrain = "";
    tRemainder = diffTime % trainFrequency;
    tMinutesTillTrain = trainFrequency - tRemainder;
    nextTrain = moment().add(tMinutesTillTrain, "minutes");
-   
-  
+
 
     var newTrain = {
       train: trainName,
@@ -97,7 +96,5 @@ database.ref().on("child_added", function(childSnapShot){
 
 });
 
-   var currentDate = moment();
-  console.log(currentDate.format("MM/DD/YYYY hh:mm a"));
 
     
